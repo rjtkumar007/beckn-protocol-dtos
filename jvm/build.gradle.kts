@@ -4,10 +4,11 @@ plugins {
   id("jacoco")
   kotlin("jvm") version "1.4.31"
   kotlin("kapt") version "1.4.31"
+  id("org.jetbrains.kotlin.plugin.serialization") version "1.5.10"
 }
 
 group = "org.beckn"
-version = "0.0.1-SNAPSHOT"
+version = "0.9.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 
@@ -16,8 +17,7 @@ repositories {
 }
 
 dependencies {
-  val retrofitVersion = "2.9.+"
-
+  implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.+")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
@@ -37,6 +37,9 @@ tasks.withType<Test> {
   useJUnitPlatform()
 }
 
+tasks.jar{
+  archiveBaseName.set("beckn-protocol-dtos")
+}
 jacoco {
   toolVersion = "0.8.7"
 }

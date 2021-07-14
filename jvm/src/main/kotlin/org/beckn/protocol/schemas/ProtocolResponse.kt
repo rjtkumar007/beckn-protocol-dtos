@@ -1,6 +1,7 @@
 package org.beckn.protocol.schemas
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import kotlinx.serialization.Serializable
 
 interface ProtocolResponse {
   val context: ProtocolContext?
