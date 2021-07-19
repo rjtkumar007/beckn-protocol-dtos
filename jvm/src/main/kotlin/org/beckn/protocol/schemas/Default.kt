@@ -1,5 +1,5 @@
 package org.beckn.protocol.schemas
 
 @Target(AnnotationTarget.CONSTRUCTOR)
-@Retention(AnnotationRetention.SOURCE)
+@Retention(AnnotationRetention.RUNTIME)
 annotation class Default
