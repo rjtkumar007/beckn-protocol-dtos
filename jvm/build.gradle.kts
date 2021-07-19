@@ -6,12 +6,15 @@ import java.util.*
 buildscript {
   repositories {
     maven {
-      mavenLocal()        // for local testing
+      mavenLocal()
+      jcenter()// for local testing
       url = uri("https://plugins.gradle.org/m2/")
     }
   }
   dependencies {
     classpath("org.shipkit:shipkit-auto-version:1.1.19")
+    classpath("com.amazonaws:aws-java-sdk-iam:1.12.26")
+    classpath("com.amazonaws:aws-java-sdk-ec2:1.12.26")
   }
 }
 
@@ -79,6 +82,9 @@ publishing {
   repositories {
     maven {
       url = uri("s3://beckn-maven-artifacts/releases")
+      authentication {
+        val awsIm by registering(AwsImAuthentication::class)
+      }
     }
   }
 }
