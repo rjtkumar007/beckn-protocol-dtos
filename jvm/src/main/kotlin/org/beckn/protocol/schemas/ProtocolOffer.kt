@@ -1,6 +1,6 @@
 package org.beckn.protocol.schemas
 
-data class ProtocolOffer (
+data class ProtocolOffer(
     val id: String? = null,
     val descriptor: ProtocolDescriptor? = null,
     val locationIds: List<String>? = null,

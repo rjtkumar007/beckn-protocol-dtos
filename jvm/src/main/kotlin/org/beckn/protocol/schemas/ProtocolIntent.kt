@@ -7,12 +7,12 @@ data class ProtocolIntent(
     val provider: ProtocolProvider?
 )
 
-data class ProtocolIntentItem (
-  val id: String? = null,
-  val descriptor: ProtocolIntentItemDescriptor? = null
+data class ProtocolIntentItem(
+    val id: String? = null,
+    val descriptor: ProtocolIntentItemDescriptor? = null
 )
 
-data class ProtocolIntentItemDescriptor (
-  val name: String? = null,
-  val tags: Map<String, String>? = null
+data class ProtocolIntentItemDescriptor(
+    val name: String? = null,
+    val tags: Map<String, String>? = null
 )

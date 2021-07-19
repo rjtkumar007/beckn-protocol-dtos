@@ -1,16 +1,16 @@
 package org.beckn.protocol.schemas
 
 data class ProtocolLocation @Default constructor(
-    val id: String? = null,
-    val descriptor: ProtocolDescriptor? = null,
-    val gps: String? = null,
-    val address: ProtocolAddress? = null,
-    val stationCode: String? = null,
-    val city: ProtocolCity? = null,
-    val country: ProtocolCountry? = null,
-    val circle: ProtocolCircle? = null,
-    val polygon: String? = null,
-    val `3dspace`: String? = null
+  val id: String? = null,
+  val descriptor: ProtocolDescriptor? = null,
+  val gps: String? = null,
+  val address: ProtocolAddress? = null,
+  val stationCode: String? = null,
+  val city: ProtocolCity? = null,
+  val country: ProtocolCountry? = null,
+  val circle: ProtocolCircle? = null,
+  val polygon: String? = null,
+  val `3dspace`: String? = null
 )
 
 data class ProtocolCity @Default constructor(
@@ -28,12 +28,12 @@ data class ProtocolCircle @Default constructor(
 )
 
 data class ProtocolScalar @Default constructor(
-    val value: java.math.BigDecimal,
-    val unit: String,
-    val type: Type? = null,
-    val estimatedValue: java.math.BigDecimal? = null,
-    val computedValue: java.math.BigDecimal? = null,
-    val range: ProtocolScalarRange? = null
+  val value: java.math.BigDecimal,
+  val unit: String,
+  val type: Type? = null,
+  val estimatedValue: java.math.BigDecimal? = null,
+  val computedValue: java.math.BigDecimal? = null,
+  val range: ProtocolScalarRange? = null
 ) {
 
   enum class Type(val value: String) {

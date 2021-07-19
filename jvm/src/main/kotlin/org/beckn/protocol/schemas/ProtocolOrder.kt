@@ -1,18 +1,18 @@
 package org.beckn.protocol.schemas
 
 data class ProtocolOrder @Default constructor(
-    val provider: ProtocolSelectMessageSelectedProvider,
-    val items: List<ProtocolSelectMessageSelectedItems>,
-    val addOns: List<ProtocolSelectMessageSelectedAddOns>?,
-    val offers: List<ProtocolSelectMessageSelectedOffers>?,
-    val billing: ProtocolBilling,
-    val fulfillment: ProtocolFulfillment,
-    val quote: ProtocolQuotation? = null,
-    val payment: ProtocolPayment? = null, //todo: is this surely nullable?
-    val id: String? = null,
-    val state: String? = null,
-    val createdAt: java.time.OffsetDateTime? = null,
-    val updatedAt: java.time.OffsetDateTime? = null
+  val provider: ProtocolSelectMessageSelectedProvider,
+  val items: List<ProtocolSelectMessageSelectedItems>,
+  val addOns: List<ProtocolSelectMessageSelectedAddOns>?,
+  val offers: List<ProtocolSelectMessageSelectedOffers>?,
+  val billing: ProtocolBilling,
+  val fulfillment: ProtocolFulfillment,
+  val quote: ProtocolQuotation? = null,
+  val payment: ProtocolPayment? = null, //todo: is this surely nullable?
+  val id: String? = null,
+  val state: String? = null,
+  val createdAt: java.time.OffsetDateTime? = null,
+  val updatedAt: java.time.OffsetDateTime? = null
 )
 
 
