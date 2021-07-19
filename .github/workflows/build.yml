@@ -26,7 +26,7 @@ jobs:
             ${{ runner.os }}-gradle-
       - name: JVM Build with Gradle
         working-directory: ./jvm
-        run: ./gradlew clean build publish
+        run: ./gradlew clean autoVersion build publish
       - name: Git Tag version
         working-directory: ./jvm
         run: ./gradlew gitTagVersion
