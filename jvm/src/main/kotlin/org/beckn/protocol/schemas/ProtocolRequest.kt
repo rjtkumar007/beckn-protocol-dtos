@@ -30,3 +30,12 @@ data class ProtocolInitRequest @Default constructor(
 data class ProtocolInitRequestMessage @Default constructor(
   val order: ProtocolOrder
 )
+
+data class ProtocolConfirmRequest @Default constructor(
+  override val context: ProtocolContext,
+  val message: ProtocolConfirmRequestMessage
+): ProtocolRequest
+
+data class ProtocolConfirmRequestMessage @Default constructor(
+  val order: ProtocolOrder
+)
