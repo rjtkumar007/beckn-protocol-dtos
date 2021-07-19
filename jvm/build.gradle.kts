@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import java.io.FileInputStream
 import java.io.ByteArrayOutputStream
+import java.io.FileInputStream
 import java.util.*
 
 buildscript {
@@ -27,7 +27,7 @@ plugins {
 }
 
 val versionProperties = loadVersionProps()
-group = "org.beckn.jvm.kotlin"
+group = "org.beckn.jvm"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {

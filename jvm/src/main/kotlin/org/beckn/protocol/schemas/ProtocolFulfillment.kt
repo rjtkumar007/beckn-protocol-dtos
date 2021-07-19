@@ -10,9 +10,14 @@ data class ProtocolFulfillment @Default constructor(
   val start: ProtocolFulfillmentStart? = null,
   val end: ProtocolFulfillmentEnd? = null,
   val purpose: String? = null,
+  val customer: ProtocolCustomer? = null,
   val tags: Map<String, String>? = null
 )
 
+data class ProtocolCustomer @Default constructor(
+  val person: ProtocolPerson? = null,
+  val contact: ProtocolContact? = null
+)
 
 data class ProtocolState @Default constructor(
   val descriptor: ProtocolDescriptor? = null,
@@ -21,22 +26,12 @@ data class ProtocolState @Default constructor(
 )
 
 data class ProtocolPerson @Default constructor(
-  val name: ProtocolName? = null,
+  val name: String? = null,
   val image: String? = null,
   val dob: java.time.LocalDate? = null,
   val gender: String? = null,
   val cred: String? = null,
   val tags: Map<String, String>? = null
-)
-
-data class ProtocolName @Default constructor(
-  val full: String? = null,
-  val additionalName: String? = null,
-  val familyName: String? = null,
-  val givenName: String? = null,
-  val callSign: String? = null,
-  val honorificPrefix: String? = null,
-  val honorificSuffix: String? = null
 )
 
 data class ProtocolVehicle @Default constructor(
