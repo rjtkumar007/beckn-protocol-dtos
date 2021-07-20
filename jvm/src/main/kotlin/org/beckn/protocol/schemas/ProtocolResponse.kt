@@ -8,6 +8,11 @@ interface ProtocolResponse {
   val error: ProtocolError?
 }
 
+data class ProtocolErrorResponse(
+  override val context: ProtocolContext,
+  override val error: ProtocolError? = null
+): ProtocolResponse
+
 data class ResponseMessage @Default constructor(val ack: org.beckn.protocol.schemas.ProtocolAck) {
   companion object {
     fun ack(): ResponseMessage = ResponseMessage(org.beckn.protocol.schemas.ProtocolAck(ResponseStatus.ACK))
