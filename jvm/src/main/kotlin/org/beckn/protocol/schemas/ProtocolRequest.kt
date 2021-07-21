@@ -47,5 +47,5 @@ data class ProtocolTrackRequest @Default constructor(
 
 data class ProtocolTrackRequestMessage @Default constructor(
   val orderId: String,
-  val callbackUrl: String?,
+  val callbackUrl: String? = null,
 )
