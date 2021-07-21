@@ -34,8 +34,18 @@ data class ProtocolInitRequestMessage @Default constructor(
 data class ProtocolConfirmRequest @Default constructor(
   override val context: ProtocolContext,
   val message: ProtocolConfirmRequestMessage
-): ProtocolRequest
+) : ProtocolRequest
 
 data class ProtocolConfirmRequestMessage @Default constructor(
   val order: ProtocolOrder
+)
+
+data class ProtocolTrackRequest @Default constructor(
+  override val context: ProtocolContext,
+  val message: ProtocolTrackRequestMessage
+) : ProtocolRequest
+
+data class ProtocolTrackRequestMessage @Default constructor(
+  val orderId: String,
+  val callbackUrl: String?,
 )

@@ -66,7 +66,6 @@ data class ProtocolOnInitMessage @Default constructor(
   val initialized: ProtocolOnInitMessageInitialized? = null
 )
 
-
 data class ProtocolOnConfirm @Default constructor(
   override val context: ProtocolContext,
   val message: ProtocolOnConfirmMessage? = null,
