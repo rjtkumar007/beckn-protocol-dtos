@@ -1,6 +1,7 @@
 package org.beckn.protocol.schemas
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import com.fasterxml.jackson.annotation.JsonProperty
 import kotlinx.serialization.Serializable
 
 interface ProtocolResponse {
@@ -11,7 +12,7 @@ interface ProtocolResponse {
 data class ProtocolErrorResponse(
   override val context: ProtocolContext,
   override val error: ProtocolError? = null
-): ProtocolResponse
+) : ProtocolResponse
 
 data class ResponseMessage @Default constructor(val ack: org.beckn.protocol.schemas.ProtocolAck) {
   companion object {
@@ -75,3 +76,26 @@ data class ProtocolOnConfirm @Default constructor(
 data class ProtocolOnConfirmMessage @Default constructor(
   val order: ProtocolOrder? = null
 )
+
+data class ProtocolOnTrack @Default constructor(
+  override val context: ProtocolContext,
+  val message: ProtocolOnTrackMessage? = null,
+  override val error: ProtocolError? = null
+) : ProtocolResponse
+
+data class ProtocolOnTrackMessage @Default constructor(
+  val tracking: ProtocolOnSelectMessageSelected? = null
+)
+
+data class ProtocolTrackingInformation @Default constructor(
+  val url: String? = null,
+  val status: ProtocolTrackingStatus? = null,
+) {
+  enum class ProtocolTrackingStatus {
+    @JsonProperty("active")
+    Active,
+
+    @JsonProperty("inactive")
+    Inactive
+  }
+}
