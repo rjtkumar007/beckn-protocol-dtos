@@ -49,3 +49,12 @@ data class ProtocolTrackRequestMessage @Default constructor(
   val orderId: String,
   val callbackUrl: String? = null,
 )
+
+data class ProtocolSupportRequest @Default constructor(
+  override val context: ProtocolContext,
+  val message: ProtocolSupportRequestMessage
+) : ProtocolRequest
+
+data class ProtocolSupportRequestMessage @Default constructor(
+  val refId: String
+)

@@ -13,10 +13,10 @@ data class ProtocolErrorResponse(
   override val error: ProtocolError? = null
 ) : ProtocolResponse
 
-data class ResponseMessage @Default constructor(val ack: org.beckn.protocol.schemas.ProtocolAck) {
+data class ResponseMessage @Default constructor(val ack: ProtocolAck) {
   companion object {
-    fun ack(): ResponseMessage = ResponseMessage(org.beckn.protocol.schemas.ProtocolAck(ResponseStatus.ACK))
-    fun nack(): ResponseMessage = ResponseMessage(org.beckn.protocol.schemas.ProtocolAck(ResponseStatus.NACK))
+    fun ack(): ResponseMessage = ResponseMessage(ProtocolAck(ResponseStatus.ACK))
+    fun nack(): ResponseMessage = ResponseMessage(ProtocolAck(ResponseStatus.NACK))
   }
 }
 
@@ -84,4 +84,16 @@ data class ProtocolOnTrack @Default constructor(
 
 data class ProtocolOnTrackMessage @Default constructor(
   val tracking: ProtocolOnTrackMessageTracking? = null
+)
+
+data class ProtocolOnSupport @Default constructor(
+  override val context: ProtocolContext,
+  val message: ProtocolOnSupportMessage? = null,
+  override val error: ProtocolError? = null
+) : ProtocolResponse
+
+data class ProtocolOnSupportMessage @Default constructor(
+  val phone: String?,
+  val email: String?,
+  val uri: String?
 )
