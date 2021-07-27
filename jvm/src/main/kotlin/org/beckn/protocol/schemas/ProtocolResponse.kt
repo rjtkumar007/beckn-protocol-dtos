@@ -93,7 +93,7 @@ data class ProtocolOnSupport @Default constructor(
 ) : ProtocolResponse
 
 data class ProtocolOnSupportMessage @Default constructor(
-  val phone: String?,
-  val email: String?,
-  val uri: String?
+  val phone: String? = null,
+  val email: String? = null,
+  val uri: String? = null
 )
