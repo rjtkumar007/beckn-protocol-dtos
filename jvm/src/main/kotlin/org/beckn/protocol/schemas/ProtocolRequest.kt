@@ -58,3 +58,13 @@ data class ProtocolSupportRequest @Default constructor(
 data class ProtocolSupportRequestMessage @Default constructor(
   val refId: String
 )
+
+data class ProtocolRatingRequest @Default constructor(
+  override val context: ProtocolContext,
+  val message: ProtocolRatingRequestMessage
+) : ProtocolRequest
+
+data class ProtocolRatingRequestMessage @Default constructor(
+  val id: String,
+  val value: Int
+)

@@ -97,3 +97,13 @@ data class ProtocolOnSupportMessage @Default constructor(
   val email: String? = null,
   val uri: String? = null
 )
+
+data class ProtocolOnRating @Default constructor(
+  override val context: ProtocolContext,
+  val message: ProtocolOnRatingMessage? = null,
+  override val error: ProtocolError? = null
+) : ProtocolResponse
+
+data class ProtocolOnRatingMessage @Default constructor(
+  val feedback: ProtocolOnRatingMessageFeedback? = null
+)
