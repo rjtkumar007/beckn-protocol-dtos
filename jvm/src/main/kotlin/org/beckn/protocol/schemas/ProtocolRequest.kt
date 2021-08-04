@@ -68,3 +68,17 @@ data class ProtocolRatingRequestMessage @Default constructor(
   val id: String,
   val value: Int
 )
+
+data class ProtocolGetCancellationReasonsRequest @Default constructor(
+  override val context: ProtocolContext
+) : ProtocolRequest
+
+data class ProtocolCancelRequest @Default constructor(
+  override val context: ProtocolContext,
+  val message: ProtocolCancelRequestMessage
+): ProtocolRequest
+
+data class ProtocolCancelRequestMessage @Default constructor(
+  val orderId: String,
+  val cancellationReasonId: String
+)
