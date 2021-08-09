@@ -107,3 +107,13 @@ data class ProtocolOnRating @Default constructor(
 data class ProtocolOnRatingMessage @Default constructor(
   val feedback: ProtocolOnRatingMessageFeedback? = null
 )
+
+data class ProtocolOnOrderStatus @Default constructor(
+  override val context: ProtocolContext,
+  val message: ProtocolOnOrderStatusMessage? = null,
+  override val error: ProtocolError? = null
+) : ProtocolResponse
+
+data class ProtocolOnOrderStatusMessage @Default constructor(
+  val order: ProtocolOrder? = null
+)
