@@ -117,3 +117,13 @@ data class ProtocolOnOrderStatus @Default constructor(
 data class ProtocolOnOrderStatusMessage @Default constructor(
   val order: ProtocolOrder? = null
 )
+
+data class ProtocolOnCancel @Default constructor(
+  override val context: ProtocolContext,
+  val message: ProtocolOnCancelMessage? = null,
+  override val error: ProtocolError? = null
+) : ProtocolResponse
+
+data class ProtocolOnCancelMessage @Default constructor(
+  val order: ProtocolOrder
+)
