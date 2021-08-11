@@ -127,3 +127,7 @@ data class ProtocolOnCancel @Default constructor(
 data class ProtocolOnCancelMessage @Default constructor(
   val order: ProtocolOrder
 )
+
+data class ProtocolRatingCategoriesResponse @Default constructor(
+  val Category: ProtocolCategory
+)
