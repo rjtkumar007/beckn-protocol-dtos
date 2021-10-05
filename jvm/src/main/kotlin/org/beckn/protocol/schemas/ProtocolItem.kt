@@ -11,5 +11,6 @@ data class ProtocolItem @Default constructor(
   val matched: Boolean?,
   val related: Boolean?,
   val recommended: Boolean?,
-  val tags: Map<String, String>? = null
+  val tags: Map<String, String>? = null,
+  val rating: Int? = null
 )

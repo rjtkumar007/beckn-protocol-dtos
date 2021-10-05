@@ -1,7 +1,7 @@
 package org.beckn.protocol.schemas
 
 data class ProtocolOrder @Default constructor(
-  val provider: ProtocolSelectMessageSelectedProvider,
+  val provider: ProtocolSelectMessageSelectedProvider? = null,
   val items: List<ProtocolSelectMessageSelectedItems>,
   val addOns: List<ProtocolSelectMessageSelectedAddOns>?,
   val offers: List<ProtocolSelectMessageSelectedOffers>?,

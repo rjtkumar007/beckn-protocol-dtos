@@ -3,7 +3,6 @@ package org.beckn.protocol.schemas
 import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonProperty
 import java.time.Clock
-import java.time.Duration
 import java.time.OffsetDateTime
 
 data class ProtocolContext @Default constructor(
@@ -21,7 +20,7 @@ data class ProtocolContext @Default constructor(
   @JsonIgnore val clock: Clock = Clock.systemUTC(),
   val timestamp: OffsetDateTime = OffsetDateTime.now(clock),
   val key: String? = null,
-  val ttl: Duration? = null,
+  val ttl: String? = null,
 ) {
   enum class Action(val value: String) {
     @JsonProperty("search")
@@ -40,8 +39,8 @@ data class ProtocolContext @Default constructor(
     TRACK("track"),
     @JsonProperty("cancel")
     CANCEL("cancel"),
-    @JsonProperty("feedback")
-    FEEDBACK("feedback"),
+    @JsonProperty("rating")
+    RATING("rating"),
     @JsonProperty("support")
     SUPPORT("support"),
     @JsonProperty("on_search")
@@ -63,8 +62,6 @@ data class ProtocolContext @Default constructor(
     @JsonProperty("on_feedback")
     ON_FEEDBACK("on_feedback"),
     @JsonProperty("on_support")
-    ON_SUPPORT("on_support"),
-    @JsonProperty("ack")
-    ACK("ack"),
+    ON_SUPPORT("on_support")
   }
 }

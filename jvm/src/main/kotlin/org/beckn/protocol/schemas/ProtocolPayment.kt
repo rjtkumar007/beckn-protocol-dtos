@@ -43,3 +43,9 @@ data class ProtocolPayment @Default constructor(
     NOTPAID("NOT-PAID");
   }
 }
+data class PaymentParams @Default constructor(
+  val transaction_id: String? = null,
+  val transaction_status: String? = null,
+  val amount: String? = null,
+  val currency: ProtocolPrice? = null,
+)

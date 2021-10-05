@@ -10,8 +10,6 @@ data class ProtocolQuotation @Default constructor(
 
 
 data class ProtocolQuotationBreakup @Default constructor(
-  val type: Type? = null,
-  val refId: String? = null,
   val title: String? = null,
   val price: ProtocolPrice? = null
 ) {

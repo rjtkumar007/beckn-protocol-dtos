@@ -36,8 +36,8 @@ data class ProtocolAckResponse(
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class ProtocolOnSearch @Default constructor(
-  override val context: ProtocolContext,
-  val message: ProtocolOnSearchMessage? = null,
+  override val context: ProtocolContext? = null,
+  val message: ProtocolOnSearchMessage?,
   override val error: ProtocolError? = null,
 ) : ProtocolResponse
 
@@ -46,29 +46,29 @@ data class ProtocolOnSearchMessage @Default constructor(
 )
 
 data class ProtocolOnSelect @Default constructor(
-  override val context: ProtocolContext,
-  val message: ProtocolOnSelectMessage? = null,
+  override val context: ProtocolContext? = null,
+  val message: ProtocolOnSelectMessage?,
   override val error: ProtocolError? = null
 ) : ProtocolResponse
 
 data class ProtocolOnSelectMessage @Default constructor(
-  val selected: ProtocolOnSelectMessageSelected? = null
+  val order: ProtocolOnSelectMessageSelected? = null
 )
 
 
 data class ProtocolOnInit @Default constructor(
-  override val context: ProtocolContext,
-  val message: ProtocolOnInitMessage? = null,
+  override val context: ProtocolContext? = null,
+  val message: ProtocolOnInitMessage?,
   override val error: ProtocolError? = null
 ) : ProtocolResponse
 
 data class ProtocolOnInitMessage @Default constructor(
-  val initialized: ProtocolOnInitMessageInitialized? = null
+  val order: ProtocolOnInitMessageInitialized? = null
 )
 
 data class ProtocolOnConfirm @Default constructor(
-  override val context: ProtocolContext,
-  val message: ProtocolOnConfirmMessage? = null,
+  override val context: ProtocolContext? = null,
+  val message: ProtocolOnConfirmMessage,
   override val error: ProtocolError? = null
 ) : ProtocolResponse
 
@@ -77,8 +77,8 @@ data class ProtocolOnConfirmMessage @Default constructor(
 )
 
 data class ProtocolOnTrack @Default constructor(
-  override val context: ProtocolContext,
-  val message: ProtocolOnTrackMessage? = null,
+  override val context: ProtocolContext? = null,
+  val message: ProtocolOnTrackMessage,
   override val error: ProtocolError? = null
 ) : ProtocolResponse
 
@@ -87,8 +87,8 @@ data class ProtocolOnTrackMessage @Default constructor(
 )
 
 data class ProtocolOnSupport @Default constructor(
-  override val context: ProtocolContext,
-  val message: ProtocolOnSupportMessage? = null,
+  override val context: ProtocolContext? = null,
+  val message: ProtocolOnSupportMessage,
   override val error: ProtocolError? = null
 ) : ProtocolResponse
 
@@ -99,8 +99,8 @@ data class ProtocolOnSupportMessage @Default constructor(
 )
 
 data class ProtocolOnRating @Default constructor(
-  override val context: ProtocolContext,
-  val message: ProtocolOnRatingMessage? = null,
+  override val context: ProtocolContext? = null,
+  val message: ProtocolOnRatingMessage?,
   override val error: ProtocolError? = null
 ) : ProtocolResponse
 
@@ -109,8 +109,8 @@ data class ProtocolOnRatingMessage @Default constructor(
 )
 
 data class ProtocolOnOrderStatus @Default constructor(
-  override val context: ProtocolContext,
-  val message: ProtocolOnOrderStatusMessage? = null,
+  override val context: ProtocolContext? = null,
+  val message: ProtocolOnOrderStatusMessage?,
   override val error: ProtocolError? = null
 ) : ProtocolResponse
 
@@ -119,8 +119,8 @@ data class ProtocolOnOrderStatusMessage @Default constructor(
 )
 
 data class ProtocolOnCancel @Default constructor(
-  override val context: ProtocolContext,
-  val message: ProtocolOnCancelMessage? = null,
+  override val context: ProtocolContext? = null,
+  val message: ProtocolOnCancelMessage?,
   override val error: ProtocolError? = null
 ) : ProtocolResponse
 
