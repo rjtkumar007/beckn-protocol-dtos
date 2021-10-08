@@ -11,7 +11,7 @@ data class ProtocolFulfillment @Default constructor(
   val end: ProtocolFulfillmentEnd? = null,
   val customer: ProtocolCustomer? = null,
   val tags: Map<String, String>? = null,
-  val provider_id: ProtocolProvider? = null,
+  val provider_id: String? = null,
   val rating: Int? = null
 )
 
