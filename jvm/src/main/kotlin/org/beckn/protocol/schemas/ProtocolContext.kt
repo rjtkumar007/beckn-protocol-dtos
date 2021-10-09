@@ -59,8 +59,8 @@ data class ProtocolContext @Default constructor(
     ON_TRACK("on_track"),
     @JsonProperty("on_cancel")
     ON_CANCEL("on_cancel"),
-    @JsonProperty("on_feedback")
-    ON_FEEDBACK("on_feedback"),
+    @JsonProperty("on_rating")
+    ON_RATING("on_rating"),
     @JsonProperty("on_support")
     ON_SUPPORT("on_support")
   }
