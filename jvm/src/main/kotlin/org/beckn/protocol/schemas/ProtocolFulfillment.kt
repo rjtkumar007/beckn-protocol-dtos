@@ -9,9 +9,10 @@ data class ProtocolFulfillment @Default constructor(
   val vehicle: ProtocolVehicle? = null,
   val start: ProtocolFulfillmentStart? = null,
   val end: ProtocolFulfillmentEnd? = null,
-  val purpose: String? = null,
   val customer: ProtocolCustomer? = null,
-  val tags: Map<String, String>? = null
+  val tags: Map<String, String>? = null,
+  val provider_id: String? = null,
+  val rating: Int? = null
 )
 
 data class ProtocolCustomer @Default constructor(

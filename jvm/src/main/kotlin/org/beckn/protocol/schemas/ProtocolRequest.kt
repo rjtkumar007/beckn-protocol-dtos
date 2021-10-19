@@ -19,7 +19,7 @@ data class ProtocolSelectRequest @Default constructor(
 ) : ProtocolRequest
 
 data class ProtocolSelectRequestMessage @Default constructor(
-  val selected: ProtocolSelectMessageSelected
+  val order: ProtocolSelectMessageSelected
 )
 
 data class ProtocolInitRequest @Default constructor(
