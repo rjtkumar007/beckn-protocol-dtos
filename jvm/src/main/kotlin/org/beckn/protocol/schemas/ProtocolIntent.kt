@@ -3,7 +3,8 @@ package org.beckn.protocol.schemas
 data class ProtocolIntent(
   val fulfillment: ProtocolFulfillment?,
   val item: ProtocolIntentItem? = null,
-  val provider: ProtocolProvider?
+  val provider: ProtocolProvider?,
+  val category: ProtocolCategory? = null
 )
 
 data class ProtocolIntentItem(
