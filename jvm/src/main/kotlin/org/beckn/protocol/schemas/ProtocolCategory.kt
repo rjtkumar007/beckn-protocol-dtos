@@ -3,7 +3,7 @@ package org.beckn.protocol.schemas
 import java.time.LocalDateTime
 
 interface Category{
-  val id: String
+  val id: String?
   val parentCategoryId: String?
   val descriptor: ProtocolDescriptor
   val time: LocalDateTime?
@@ -11,7 +11,7 @@ interface Category{
 }
 
 data class ProtocolCategory @Default constructor(
-  override val id: String,
+  override val id: String?,
   override val parentCategoryId: String? = null,
   override val descriptor: ProtocolDescriptor,
   override val time: LocalDateTime? = null,
@@ -19,7 +19,7 @@ data class ProtocolCategory @Default constructor(
 ) : Category
 
 data class ProtocolRatingCategory @Default constructor(
-  override val id: String,
+  override val id: String?,
   override val parentCategoryId: String? = null,
   override val descriptor: ProtocolDescriptor,
   override val time: LocalDateTime? = null,
