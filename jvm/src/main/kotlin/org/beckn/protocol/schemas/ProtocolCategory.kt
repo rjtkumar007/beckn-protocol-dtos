@@ -11,7 +11,7 @@ interface Category{
 }
 
 data class ProtocolCategory @Default constructor(
-  override val id: String?,
+  override val id: String? = null,
   override val parentCategoryId: String? = null,
   override val descriptor: ProtocolDescriptor,
   override val time: LocalDateTime? = null,
@@ -19,7 +19,7 @@ data class ProtocolCategory @Default constructor(
 ) : Category
 
 data class ProtocolRatingCategory @Default constructor(
-  override val id: String?,
+  override val id: String,
   override val parentCategoryId: String? = null,
   override val descriptor: ProtocolDescriptor,
   override val time: LocalDateTime? = null,
