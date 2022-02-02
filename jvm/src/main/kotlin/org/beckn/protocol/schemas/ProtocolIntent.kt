@@ -4,7 +4,8 @@ data class ProtocolIntent(
   val fulfillment: ProtocolFulfillment?,
   val item: ProtocolIntentItem? = null,
   val provider: ProtocolProvider?,
-  val category: ProtocolCategory? = null
+  val category: ProtocolCategory? = null,
+  val tags: Map<String, String>? = null
 )
 
 data class ProtocolIntentItem(
