@@ -17,7 +17,7 @@ data class ProtocolProviderCatalog @Default constructor(
   val locations: List<ProtocolLocation>? = null,
   val categories: List<ProtocolCategory>? = null,
   val items: List<ProtocolItem>? = null,
-  val fullfillments: List<ProtocolFulfillment>? = null,
+  val fulfillments: List<ProtocolFulfillment>? = null,
   val tags: Map<String, String>? = null,
   val exp: LocalDateTime? = null,
   val matched: Boolean? = null

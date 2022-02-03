@@ -3,6 +3,7 @@ package org.beckn.protocol.schemas
 data class ProtocolItem @Default constructor(
   val id: String? = null,
   val parentItemId: String? = null,
+  val fulfillmentId: String? = null,
   val descriptor: ProtocolDescriptor? = null,
   val price: ProtocolPrice? = null,
   val categoryId: String? = null,
