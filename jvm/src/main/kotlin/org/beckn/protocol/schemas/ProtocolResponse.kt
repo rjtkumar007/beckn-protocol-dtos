@@ -131,3 +131,15 @@ data class ProtocolOnCancelMessage @Default constructor(
 data class ProtocolRatingCategoriesResponse @Default constructor(
   val Category: ProtocolCategory
 )
+
+data class ProtocolOnCancellationReasons @Default constructor(
+  override val context: ProtocolContext? = null,
+  val message: ProtocolOnCancellationReasonMessage?,
+  override val error: ProtocolError? = null
+) : ProtocolResponse
+
+data class ProtocolOnCancellationReasonMessage @Default constructor(
+  val cancellationReasons: List<ProtocolOption>? = null,
+  val ratingCategories: List<ProtocolRatingCategory>? = null
+)
+
