@@ -15,8 +15,8 @@ data class ProtocolOrder @Default constructor(
   val state: String? = null,
   val createdAt: java.time.OffsetDateTime? = null,
   val updatedAt: java.time.OffsetDateTime? = null,
-  @JsonProperty("./ondc-cancellation") val ondcCancellation: ProtocolOndcOrderCancellation?,
-  @JsonProperty("./ondc-linked_orders") val ondcLinkedOrders: List<ProtocolOndcLinkedOrders>?,
+  @JsonProperty("./ondc-cancellation") val ondcCancellation: ProtocolOndcOrderCancellation? = null,
+  @JsonProperty("./ondc-linked_orders") val ondcLinkedOrders: List<ProtocolOndcLinkedOrders>? = null,
 
 )
 
